@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Backprop-AdamW",
+    "total_time_s": 2.3744,
+    "initial_rss_mb": 321.16,
+    "peak_rss_mb": 436.91,
+    "net_memory_mb": 115.75,
+    "final_train_loss": 0.01046,
+    "final_test_loss": 0.234007,
+    "final_test_metric": 0.943,
+    "total_steps": 15,
+    "total_flops": 211631400000
+  },
+  {
+    "name": "Backprop-SGD",
+    "total_time_s": 1.943,
+    "initial_rss_mb": 437.18,
+    "peak_rss_mb": 437.18,
+    "net_memory_mb": 0.0,
+    "final_train_loss": 0.015694,
+    "final_test_loss": 0.21791,
+    "final_test_metric": 0.9395,
+    "total_steps": 15,
+    "total_flops": 211631400000
+  },
+  {
+    "name": "Direct Feedback Alignment (DFA)",
+    "total_time_s": 2.2076,
+    "initial_rss_mb": 407.43,
+    "peak_rss_mb": 412.51,
+    "net_memory_mb": 5.07,
+    "final_train_loss": 2.301393,
+    "final_test_loss": 2.30138,
+    "final_test_metric": 0.114,
+    "total_steps": 15,
+    "total_flops": 142121400000
+  },
+  {
+    "name": "Forward Residual Plasticity (FRP)",
+    "total_time_s": 4.3923,
+    "initial_rss_mb": 412.52,
+    "peak_rss_mb": 441.61,
+    "net_memory_mb": 29.09,
+    "final_train_loss": 0.033073,
+    "final_test_loss": 0.17124,
+    "final_test_metric": 0.95,
+    "total_steps": 15,
+    "total_flops": 143155200000
+  }
+]

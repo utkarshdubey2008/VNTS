@@ -1,0 +1,260 @@
+{
+  "benchmark_1_multimanifold": [
+    {
+      "name": "Backprop-AdamW",
+      "total_time_s": 0.7796,
+      "initial_rss_mb": 284.66,
+      "peak_rss_mb": 302.61,
+      "net_memory_mb": 17.96,
+      "final_train_loss": 0.6939,
+      "final_test_loss": 0.709021,
+      "final_test_metric": 0.5,
+      "total_steps": 30,
+      "total_flops": 14784768000
+    },
+    {
+      "name": "Backprop-SGD",
+      "total_time_s": 0.6458,
+      "initial_rss_mb": 302.89,
+      "peak_rss_mb": 303.43,
+      "net_memory_mb": 0.54,
+      "final_train_loss": 0.699426,
+      "final_test_loss": 0.701617,
+      "final_test_metric": 0.46875,
+      "total_steps": 30,
+      "total_flops": 14784768000
+    },
+    {
+      "name": "DFA (Direct Feedback Alignment)",
+      "total_time_s": 0.9047,
+      "initial_rss_mb": 303.43,
+      "peak_rss_mb": 305.59,
+      "net_memory_mb": 2.16,
+      "final_train_loss": 1.386623,
+      "final_test_loss": 1.386351,
+      "final_test_metric": 0.30375,
+      "total_steps": 30,
+      "total_flops": 10040064000
+    },
+    {
+      "name": "Candidate 1 (FRP: Forward Residual)",
+      "total_time_s": 2.3211,
+      "initial_rss_mb": 305.59,
+      "peak_rss_mb": 307.26,
+      "net_memory_mb": 1.66,
+      "final_train_loss": 0.691499,
+      "final_test_loss": 0.707964,
+      "final_test_metric": 0.46,
+      "total_steps": 30,
+      "total_flops": 10223616000
+    },
+    {
+      "name": "SPSA (Isotropic Forward-Grad)",
+      "total_time_s": 0.5322,
+      "initial_rss_mb": 307.26,
+      "peak_rss_mb": 307.26,
+      "net_memory_mb": 0.0,
+      "final_train_loss": 1.383858,
+      "final_test_loss": 1.383765,
+      "final_test_metric": 0.32625,
+      "total_steps": 30,
+      "total_flops": 14784768000
+    },
+    {
+      "name": "Candidate 2 (L-SFG: Structured Forward-Grad)",
+      "total_time_s": 0.8344,
+      "initial_rss_mb": 307.26,
+      "peak_rss_mb": 307.39,
+      "net_memory_mb": 0.13,
+      "final_train_loss": 1.386687,
+      "final_test_loss": 1.386424,
+      "final_test_metric": 0.31125,
+      "total_steps": 30,
+      "total_flops": 14784768000
+    },
+    {
+      "name": "Candidate 3 (CLA: Closed-Form Latent)",
+      "total_time_s": 3.0149,
+      "initial_rss_mb": 307.39,
+      "peak_rss_mb": 312.22,
+      "net_memory_mb": 4.83,
+      "final_train_loss": 14.521933,
+      "final_test_loss": 2.791276,
+      "final_test_metric": 0.2525,
+      "total_steps": 30,
+      "total_flops": 13002240000
+    }
+  ],
+  "benchmark_2_regression": [
+    {
+      "name": "Backprop-AdamW",
+      "total_time_s": 0.7615,
+      "initial_rss_mb": 312.29,
+      "peak_rss_mb": 312.61,
+      "net_memory_mb": 0.32,
+      "final_train_loss": 0.223588,
+      "final_test_loss": 0.283008,
+      "final_test_metric": 0.645431,
+      "total_steps": 30,
+      "total_flops": 15557184000
+    },
+    {
+      "name": "Backprop-SGD",
+      "total_time_s": 0.6256,
+      "initial_rss_mb": 312.61,
+      "peak_rss_mb": 312.61,
+      "net_memory_mb": 0.0,
+      "final_train_loss": 0.240331,
+      "final_test_loss": 0.27466,
+      "final_test_metric": 0.65589,
+      "total_steps": 30,
+      "total_flops": 15557184000
+    },
+    {
+      "name": "DFA (Direct Feedback Alignment)",
+      "total_time_s": 0.8734,
+      "initial_rss_mb": 312.61,
+      "peak_rss_mb": 312.61,
+      "net_memory_mb": 0.0,
+      "final_train_loss": 1.08534,
+      "final_test_loss": 1.051774,
+      "final_test_metric": -0.317723,
+      "total_steps": 30,
+      "total_flops": 10371264000
+    },
+    {
+      "name": "Candidate 1 (FRP: Forward Residual)",
+      "total_time_s": 2.3321,
+      "initial_rss_mb": 312.62,
+      "peak_rss_mb": 313.1,
+      "net_memory_mb": 0.48,
+      "final_train_loss": 0.24984,
+      "final_test_loss": 0.288031,
+      "final_test_metric": 0.639139,
+      "total_steps": 30,
+      "total_flops": 10371072000
+    },
+    {
+      "name": "SPSA (Isotropic Forward-Grad)",
+      "total_time_s": 0.5457,
+      "initial_rss_mb": 313.1,
+      "peak_rss_mb": 313.1,
+      "net_memory_mb": 0.0,
+      "final_train_loss": 0.774136,
+      "final_test_loss": 0.742406,
+      "final_test_metric": 0.069871,
+      "total_steps": 30,
+      "total_flops": 15557184000
+    },
+    {
+      "name": "Candidate 2 (L-SFG: Structured Forward-Grad)",
+      "total_time_s": 0.7818,
+      "initial_rss_mb": 313.1,
+      "peak_rss_mb": 313.16,
+      "net_memory_mb": 0.06,
+      "final_train_loss": 0.827183,
+      "final_test_loss": 0.791511,
+      "final_test_metric": 0.008349,
+      "total_steps": 30,
+      "total_flops": 15557184000
+    },
+    {
+      "name": "Candidate 3 (CLA: Closed-Form Latent)",
+      "total_time_s": 2.794,
+      "initial_rss_mb": 313.16,
+      "peak_rss_mb": 313.16,
+      "net_memory_mb": 0.0,
+      "final_train_loss": 0.626094,
+      "final_test_loss": 0.613565,
+      "final_test_metric": 0.231291,
+      "total_steps": 30,
+      "total_flops": 13517184000
+    }
+  ],
+  "benchmark_3_highdim_patterns": [
+    {
+      "name": "Backprop-AdamW",
+      "total_time_s": 1.0748,
+      "initial_rss_mb": 315.91,
+      "peak_rss_mb": 315.91,
+      "net_memory_mb": 0.0,
+      "final_train_loss": 0.0,
+      "final_test_loss": 1e-06,
+      "final_test_metric": 1.0,
+      "total_steps": 30,
+      "total_flops": 19245888000
+    },
+    {
+      "name": "Backprop-SGD",
+      "total_time_s": 0.7323,
+      "initial_rss_mb": 315.91,
+      "peak_rss_mb": 315.91,
+      "net_memory_mb": 0.0,
+      "final_train_loss": 4e-06,
+      "final_test_loss": 4e-06,
+      "final_test_metric": 1.0,
+      "total_steps": 30,
+      "total_flops": 19245888000
+    },
+    {
+      "name": "DFA (Direct Feedback Alignment)",
+      "total_time_s": 0.9787,
+      "initial_rss_mb": 315.91,
+      "peak_rss_mb": 315.91,
+      "net_memory_mb": 0.0,
+      "final_train_loss": 1.636309,
+      "final_test_loss": 1.639039,
+      "final_test_metric": 0.2625,
+      "total_steps": 30,
+      "total_flops": 13075392000
+    },
+    {
+      "name": "Candidate 1 (FRP: Forward Residual)",
+      "total_time_s": 2.6159,
+      "initial_rss_mb": 315.91,
+      "peak_rss_mb": 315.92,
+      "net_memory_mb": 0.0,
+      "final_train_loss": 0.00675,
+      "final_test_loss": 0.006622,
+      "final_test_metric": 1.0,
+      "total_steps": 30,
+      "total_flops": 13320192000
+    },
+    {
+      "name": "SPSA (Isotropic Forward-Grad)",
+      "total_time_s": 0.6824,
+      "initial_rss_mb": 315.92,
+      "peak_rss_mb": 315.92,
+      "net_memory_mb": 0.0,
+      "final_train_loss": 0.444027,
+      "final_test_loss": 0.427845,
+      "final_test_metric": 0.99875,
+      "total_steps": 30,
+      "total_flops": 19245888000
+    },
+    {
+      "name": "Candidate 2 (L-SFG: Structured Forward-Grad)",
+      "total_time_s": 0.8215,
+      "initial_rss_mb": 315.92,
+      "peak_rss_mb": 315.92,
+      "net_memory_mb": 0.0,
+      "final_train_loss": 1.632359,
+      "final_test_loss": 1.63526,
+      "final_test_metric": 0.23,
+      "total_steps": 30,
+      "total_flops": 19245888000
+    },
+    {
+      "name": "Candidate 3 (CLA: Closed-Form Latent)",
+      "total_time_s": 3.1538,
+      "initial_rss_mb": 315.92,
+      "peak_rss_mb": 315.92,
+      "net_memory_mb": 0.0,
+      "final_train_loss": 14.442715,
+      "final_test_loss": 20.389202,
+      "final_test_metric": 0.1975,
+      "total_steps": 30,
+      "total_flops": 15976320000
+    }
+  ]
+}

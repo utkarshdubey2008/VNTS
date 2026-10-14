@@ -1,0 +1,137 @@
+[
+  {
+    "depth": 2,
+    "backprop": {
+      "name": "Backprop-Depth-2",
+      "total_time_s": 0.4452,
+      "initial_rss_mb": 285.93,
+      "peak_rss_mb": 301.63,
+      "net_memory_mb": 15.7,
+      "final_train_loss": 0.696527,
+      "final_test_loss": 0.707194,
+      "final_test_metric": 0.47375,
+      "total_steps": 25,
+      "total_flops": 2275200000
+    },
+    "frp": {
+      "name": "FRP-Depth-2",
+      "total_time_s": 1.2087,
+      "initial_rss_mb": 301.91,
+      "peak_rss_mb": 303.84,
+      "net_memory_mb": 1.93,
+      "final_train_loss": 0.702671,
+      "final_test_loss": 0.709181,
+      "final_test_metric": 0.48625,
+      "total_steps": 25,
+      "total_flops": 1638400000
+    }
+  },
+  {
+    "depth": 4,
+    "backprop": {
+      "name": "Backprop-Depth-4",
+      "total_time_s": 0.6473,
+      "initial_rss_mb": 303.85,
+      "peak_rss_mb": 303.86,
+      "net_memory_mb": 0.0,
+      "final_train_loss": 0.696274,
+      "final_test_loss": 0.702165,
+      "final_test_metric": 0.4825,
+      "total_steps": 25,
+      "total_flops": 6268800000
+    },
+    "frp": {
+      "name": "FRP-Depth-4",
+      "total_time_s": 2.2578,
+      "initial_rss_mb": 303.88,
+      "peak_rss_mb": 303.88,
+      "net_memory_mb": 0.0,
+      "final_train_loss": 0.695912,
+      "final_test_loss": 0.698564,
+      "final_test_metric": 0.49625,
+      "total_steps": 25,
+      "total_flops": 4423680000
+    }
+  },
+  {
+    "depth": 8,
+    "backprop": {
+      "name": "Backprop-Depth-8",
+      "total_time_s": 1.072,
+      "initial_rss_mb": 303.89,
+      "peak_rss_mb": 304.48,
+      "net_memory_mb": 0.59,
+      "final_train_loss": 0.698764,
+      "final_test_loss": 0.695406,
+      "final_test_metric": 0.5075,
+      "total_steps": 25,
+      "total_flops": 14256000000
+    },
+    "frp": {
+      "name": "FRP-Depth-8",
+      "total_time_s": 4.3028,
+      "initial_rss_mb": 304.52,
+      "peak_rss_mb": 304.91,
+      "net_memory_mb": 0.38,
+      "final_train_loss": 0.696359,
+      "final_test_loss": 0.696226,
+      "final_test_metric": 0.49375,
+      "total_steps": 25,
+      "total_flops": 9994240000
+    }
+  },
+  {
+    "depth": 16,
+    "backprop": {
+      "name": "Backprop-Depth-16",
+      "total_time_s": 1.9662,
+      "initial_rss_mb": 304.93,
+      "peak_rss_mb": 305.83,
+      "net_memory_mb": 0.9,
+      "final_train_loss": 1.386385,
+      "final_test_loss": 1.386409,
+      "final_test_metric": 0.2425,
+      "total_steps": 25,
+      "total_flops": 30230400000
+    },
+    "frp": {
+      "name": "FRP-Depth-16",
+      "total_time_s": 8.4276,
+      "initial_rss_mb": 305.92,
+      "peak_rss_mb": 306.88,
+      "net_memory_mb": 0.96,
+      "final_train_loss": 0.698096,
+      "final_test_loss": 0.69647,
+      "final_test_metric": 0.50375,
+      "total_steps": 25,
+      "total_flops": 21135360000
+    }
+  },
+  {
+    "depth": 32,
+    "backprop": {
+      "name": "Backprop-Depth-32",
+      "total_time_s": 3.9779,
+      "initial_rss_mb": 306.93,
+      "peak_rss_mb": 309.57,
+      "net_memory_mb": 2.63,
+      "final_train_loss": 1.386493,
+      "final_test_loss": 1.386502,
+      "final_test_metric": 0.2425,
+      "total_steps": 25,
+      "total_flops": 62179200000
+    },
+    "frp": {
+      "name": "FRP-Depth-32",
+      "total_time_s": 16.553,
+      "initial_rss_mb": 309.74,
+      "peak_rss_mb": 310.53,
+      "net_memory_mb": 0.79,
+      "final_train_loss": 0.699624,
+      "final_test_loss": 0.699039,
+      "final_test_metric": 0.50625,
+      "total_steps": 25,
+      "total_flops": 43417600000
+    }
+  }
+]

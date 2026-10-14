@@ -1,0 +1,36 @@
+{
+  "standard_backprop": {
+    "name": "Standard-Transformer-Backprop",
+    "total_time_s": 17.3306,
+    "initial_rss_mb": 296.43,
+    "peak_rss_mb": 384.72,
+    "net_memory_mb": 88.29,
+    "final_train_loss": 1.86499,
+    "final_test_loss": null,
+    "final_test_metric": null,
+    "total_steps": 600,
+    "total_flops": 1079613849600,
+    "val_loss": 1.9807,
+    "val_perplexity": 7.25,
+    "tokens_per_sec": 70903.5
+  },
+  "decoupled_forward_transformer": {
+    "name": "Decoupled-Forward-Transformer-FRP",
+    "total_time_s": 23.349,
+    "initial_rss_mb": 381.87,
+    "peak_rss_mb": 403.01,
+    "net_memory_mb": 21.14,
+    "final_train_loss": 2.057027,
+    "final_test_loss": null,
+    "final_test_metric": null,
+    "total_steps": 600,
+    "total_flops": 739875225600,
+    "val_loss": 2.0891,
+    "val_perplexity": 8.08,
+    "tokens_per_sec": 52627.5
+  },
+  "samples": {
+    "backprop": "ROMEO: be though the the he comely in had:\nWhy fath his not some you, are,\nTo sother wi",
+    "dft": "ROMEO: andose rid, to rether suld you stay den are with am hald that searss this dor be"
+  }
+}
