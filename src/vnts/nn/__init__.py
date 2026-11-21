@@ -7,6 +7,7 @@ from .multiscale_spatial import MultiScaleSpatialOSM
 from .mora import MultiScaleOrthogonalAttention
 from .time_series import ContinuousStateSpaceTracker
 from .residual_vision import ResidualBlock, ResVNTSVision
+from .moe import OrthogonalSubspaceMoE
 
 __all__ = [
     "Activation",
@@ -21,5 +22,6 @@ __all__ = [
     "MultiScaleOrthogonalAttention",
     "ContinuousStateSpaceTracker",
     "ResidualBlock",
-    "ResVNTSVision"
+    "ResVNTSVision",
+    "OrthogonalSubspaceMoE"
 ]

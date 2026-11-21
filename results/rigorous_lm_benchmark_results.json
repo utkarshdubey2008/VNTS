@@ -1,0 +1,18 @@
+{
+  "vnts_moe_lm": {
+    "training_time_s": 0.0723056341521442,
+    "train_accuracy": 0.64824378490448,
+    "val_loss": 3.5707173347473145,
+    "val_perplexity": 35.54207957805912,
+    "val_accuracy": 0.3327205777168274,
+    "throughput_tokens_per_s": 53550.460422663724,
+    "peak_allocated_mb": 0.043895721435546875
+  },
+  "pytorch_transformer": {
+    "training_time_s": 2.386795427883044,
+    "val_loss": 2.619961977005005,
+    "val_perplexity": 13.735201321657868,
+    "peak_allocated_mb": 0.07115936279296875
+  },
+  "speedup_factor": 33.00981252527006
+}
