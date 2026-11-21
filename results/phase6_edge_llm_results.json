@@ -1,0 +1,15 @@
+{
+  "vnts_micro_llm": {
+    "training_time_s": 0.022647487930953503,
+    "next_token_accuracy": 0.5884661674499512,
+    "throughput_tokens_per_s": 350990.9962999943,
+    "peak_allocated_mb": 0.062041282653808594,
+    "generated_sample": "To be, or notheie  dn \nlingiongoe p,o heerrtinghie ts\npep,uer o ltd d t t"
+  },
+  "pytorch_lstm": {
+    "training_time_s": 1.075472128111869,
+    "next_token_accuracy": 0.32669082283973694,
+    "peak_allocated_mb": 0.03901863098144531
+  },
+  "speedup_factor": 47.487479909061584
+}
