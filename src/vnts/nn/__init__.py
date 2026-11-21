@@ -3,6 +3,7 @@ from .linear import Dense
 from .memory import OrthogonalMemory
 from .sequence import COMTSequence
 from .spatial import SpatialPatch
+from .multiscale_spatial import MultiScaleSpatialOSM
 
 __all__ = [
     "Activation",
@@ -12,5 +13,6 @@ __all__ = [
     "Dense",
     "OrthogonalMemory",
     "COMTSequence",
-    "SpatialPatch"
+    "SpatialPatch",
+    "MultiScaleSpatialOSM"
 ]

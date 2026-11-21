@@ -7,11 +7,14 @@ from .model import Model, Sequential
 from .base import VNTSModule
 from .engine.solver import AlgebraicEngine
 from .models.micro_llm import MicroLLM
+from .models.bpe_llm import ByteLLM
+from .nn.multiscale_spatial import MultiScaleSpatialOSM
 from . import nn
 from . import engine
 from . import models
+from . import native
 
-__version__ = "0.6.0"
+__version__ = "0.7.0"
 
 __all__ = [
     "Model",
@@ -19,8 +22,11 @@ __all__ = [
     "VNTSModule",
     "AlgebraicEngine",
     "MicroLLM",
+    "ByteLLM",
+    "MultiScaleSpatialOSM",
     "nn",
     "engine",
     "models",
+    "native",
     "__version__"
 ]

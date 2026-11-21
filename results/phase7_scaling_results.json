@@ -1,0 +1,18 @@
+{
+  "color_vision": {
+    "vnts_time_s": 0.10413032583892345,
+    "pytorch_time_s": 0.27708540204912424,
+    "speedup_factor": 2.6609481898456804
+  },
+  "byte_llm": {
+    "bytes_processed": 3776,
+    "training_time_s": 0.02510727080516517,
+    "throughput_bytes_per_s": 168438.25760137028,
+    "next_byte_accuracy": 0.8315678238868713,
+    "generated_sample": "The Vector Nullspace  Bton mBdaeftyr tetiou\nidmans.hill sorze oranu aanro-iensph"
+  },
+  "native_engine": {
+    "native_numpy_time_s": 0.004885127069428563,
+    "pytorch_cpu_time_s": 0.004967451095581055
+  }
+}
