@@ -1,0 +1,220 @@
+{
+  "xor": {
+    "Backprop_AdamW": {
+      "test_acc": 1.0,
+      "test_loss": 0.0008509854669682682,
+      "train_acc": 1.0,
+      "train_loss": 0.0008328733965754509,
+      "total_time_s": 0.317089319229126,
+      "peak_rss_mb": 498.1015625
+    },
+    "Backprop_SGD": {
+      "test_acc": 1.0,
+      "test_loss": 0.0003379449772182852,
+      "train_acc": 1.0,
+      "train_loss": 0.0003379179397597909,
+      "total_time_s": 0.22212004661560059,
+      "peak_rss_mb": 498.1015625
+    },
+    "DATS_SI": {
+      "test_acc": 1.0,
+      "test_loss": 0.10141372680664062,
+      "train_acc": 1.0,
+      "train_loss": 0.10223636776208878,
+      "best_val_acc": 1.0,
+      "total_time_s": 0.07897424697875977,
+      "peak_rss_mb": 498.1015625
+    }
+  },
+  "circles": {
+    "Backprop_AdamW": {
+      "test_acc": 1.0,
+      "test_loss": 0.003504794090986252,
+      "train_acc": 1.0,
+      "train_loss": 0.0035215376410633326,
+      "total_time_s": 0.26408910751342773,
+      "peak_rss_mb": 498.1015625
+    },
+    "Backprop_SGD": {
+      "test_acc": 1.0,
+      "test_loss": 0.002167483326047659,
+      "train_acc": 1.0,
+      "train_loss": 0.002212262712419033,
+      "total_time_s": 0.20583772659301758,
+      "peak_rss_mb": 498.1015625
+    },
+    "DATS_SI": {
+      "test_acc": 1.0,
+      "test_loss": 0.14521996676921844,
+      "train_acc": 0.9989583492279053,
+      "train_loss": 0.14504601061344147,
+      "best_val_acc": 1.0,
+      "total_time_s": 0.07143092155456543,
+      "peak_rss_mb": 498.1015625
+    }
+  },
+  "two_spirals": {
+    "Backprop_AdamW": {
+      "test_acc": 1.0,
+      "test_loss": 0.00029421443468891084,
+      "train_acc": 1.0,
+      "train_loss": 0.00029225117759779096,
+      "total_time_s": 0.46437788009643555,
+      "peak_rss_mb": 498.1015625
+    },
+    "Backprop_SGD": {
+      "test_acc": 1.0,
+      "test_loss": 0.00248939567245543,
+      "train_acc": 1.0,
+      "train_loss": 0.0022213906049728394,
+      "total_time_s": 0.3691868782043457,
+      "peak_rss_mb": 498.1015625
+    },
+    "DATS_SI": {
+      "test_acc": 0.9916666746139526,
+      "test_loss": 0.060410771518945694,
+      "train_acc": 0.9895833134651184,
+      "train_loss": 0.06145274266600609,
+      "best_val_acc": 1.0,
+      "total_time_s": 0.4400045871734619,
+      "peak_rss_mb": 498.1015625
+    }
+  },
+  "digits": {
+    "Backprop_AdamW": {
+      "test_acc": 0.9644444584846497,
+      "test_loss": 0.10826019197702408,
+      "train_acc": 0.998515248298645,
+      "train_loss": 0.015939196571707726,
+      "total_time_s": 0.5176494121551514,
+      "peak_rss_mb": 498.1015625
+    },
+    "Backprop_SGD": {
+      "test_acc": 0.9800000190734863,
+      "test_loss": 0.08803851902484894,
+      "train_acc": 1.0,
+      "train_loss": 0.004417956341058016,
+      "total_time_s": 0.3760242462158203,
+      "peak_rss_mb": 498.1015625
+    },
+    "DATS_SI": {
+      "test_acc": 0.9399999976158142,
+      "test_loss": 1.5988436937332153,
+      "train_acc": 0.9777283072471619,
+      "train_loss": 1.584811806678772,
+      "best_val_acc": 0.9622222185134888,
+      "total_time_s": 0.33471179008483887,
+      "peak_rss_mb": 498.1015625
+    }
+  },
+  "depth_scaling": {
+    "depth_2": {
+      "Backprop_AdamW": {
+        "test_acc": 1.0,
+        "test_loss": 0.12237253785133362,
+        "train_acc": 1.0,
+        "train_loss": 0.13235308229923248,
+        "total_time_s": 0.1689157485961914,
+        "peak_rss_mb": 498.1015625
+      },
+      "Backprop_SGD": {
+        "test_acc": 1.0,
+        "test_loss": 0.02518249675631523,
+        "train_acc": 1.0,
+        "train_loss": 0.02940124087035656,
+        "total_time_s": 0.11565399169921875,
+        "peak_rss_mb": 498.1015625
+      },
+      "DATS_SI": {
+        "test_acc": 0.6050000190734863,
+        "test_loss": 0.6932327151298523,
+        "train_acc": 0.5662500262260437,
+        "train_loss": 0.6931561827659607,
+        "best_val_acc": 0.9950000047683716,
+        "total_time_s": 0.040221452713012695,
+        "peak_rss_mb": 498.1015625
+      }
+    },
+    "depth_4": {
+      "Backprop_AdamW": {
+        "test_acc": 1.0,
+        "test_loss": 0.003744659945368767,
+        "train_acc": 1.0,
+        "train_loss": 0.0014489039313048124,
+        "total_time_s": 0.24606752395629883,
+        "peak_rss_mb": 498.1015625
+      },
+      "Backprop_SGD": {
+        "test_acc": 0.9950000047683716,
+        "test_loss": 0.006185402162373066,
+        "train_acc": 1.0,
+        "train_loss": 0.0016920267371460795,
+        "total_time_s": 0.17684626579284668,
+        "peak_rss_mb": 498.1015625
+      },
+      "DATS_SI": {
+        "test_acc": 0.9950000047683716,
+        "test_loss": 0.10629864782094955,
+        "train_acc": 0.9987499713897705,
+        "train_loss": 0.11279702931642532,
+        "best_val_acc": 1.0,
+        "total_time_s": 0.10223555564880371,
+        "peak_rss_mb": 498.1015625
+      }
+    },
+    "depth_8": {
+      "Backprop_AdamW": {
+        "test_acc": 0.9950000047683716,
+        "test_loss": 0.007771979086101055,
+        "train_acc": 1.0,
+        "train_loss": 0.0001374408311676234,
+        "total_time_s": 0.3990490436553955,
+        "peak_rss_mb": 498.1015625
+      },
+      "Backprop_SGD": {
+        "test_acc": 1.0,
+        "test_loss": 0.00283762882463634,
+        "train_acc": 1.0,
+        "train_loss": 0.0006962078041397035,
+        "total_time_s": 0.2718029022216797,
+        "peak_rss_mb": 498.1015625
+      },
+      "DATS_SI": {
+        "test_acc": 0.9950000047683716,
+        "test_loss": 0.11985694617033005,
+        "train_acc": 0.9900000095367432,
+        "train_loss": 0.13086958229541779,
+        "best_val_acc": 1.0,
+        "total_time_s": 0.20733404159545898,
+        "peak_rss_mb": 498.1015625
+      }
+    },
+    "depth_16": {
+      "Backprop_AdamW": {
+        "test_acc": 1.0,
+        "test_loss": 0.0021880390122532845,
+        "train_acc": 1.0,
+        "train_loss": 2.9525093850679696e-05,
+        "total_time_s": 0.7074737548828125,
+        "peak_rss_mb": 498.1015625
+      },
+      "Backprop_SGD": {
+        "test_acc": 0.9950000047683716,
+        "test_loss": 0.008424918167293072,
+        "train_acc": 1.0,
+        "train_loss": 0.0005655381246469915,
+        "total_time_s": 0.5124104022979736,
+        "peak_rss_mb": 498.1015625
+      },
+      "DATS_SI": {
+        "test_acc": 0.949999988079071,
+        "test_loss": 0.22076217830181122,
+        "train_acc": 0.9474999904632568,
+        "train_loss": 0.23125912249088287,
+        "best_val_acc": 1.0,
+        "total_time_s": 0.47548341751098633,
+        "peak_rss_mb": 498.1015625
+      }
+    }
+  }
+}
