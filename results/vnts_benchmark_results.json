@@ -1,0 +1,30 @@
+{
+  "digits_vision": {
+    "task": "Digits_Vision",
+    "vnts": {
+      "accuracy": 0.9138888716697693,
+      "time_s": 0.006197479786351323,
+      "throughput_samples_per_s": 231868.44484183675,
+      "peak_rss_mb": 0.0
+    },
+    "pytorch_adamw": {
+      "accuracy": 0.7722222208976746,
+      "time_s": 0.06381705799140036,
+      "throughput_samples_per_s": 675524.7163824015,
+      "peak_rss_mb": 0.0
+    },
+    "speedup_factor": 10.29725956217628
+  },
+  "large_scale_tabular": {
+    "task": "Large_Tabular_10k",
+    "vnts": {
+      "accuracy": 0.8489999771118164,
+      "time_s": 0.40138894389383495
+    },
+    "pytorch_adamw": {
+      "accuracy": 0.9430000185966492,
+      "time_s": 1.9092324969824404
+    },
+    "speedup_factor": 4.756564738582887
+  }
+}
