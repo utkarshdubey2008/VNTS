@@ -4,6 +4,9 @@ from .memory import OrthogonalMemory
 from .sequence import COMTSequence
 from .spatial import SpatialPatch
 from .multiscale_spatial import MultiScaleSpatialOSM
+from .mora import MultiScaleOrthogonalAttention
+from .time_series import ContinuousStateSpaceTracker
+from .residual_vision import ResidualBlock, ResVNTSVision
 
 __all__ = [
     "Activation",
@@ -14,5 +17,9 @@ __all__ = [
     "OrthogonalMemory",
     "COMTSequence",
     "SpatialPatch",
-    "MultiScaleSpatialOSM"
+    "MultiScaleSpatialOSM",
+    "MultiScaleOrthogonalAttention",
+    "ContinuousStateSpaceTracker",
+    "ResidualBlock",
+    "ResVNTSVision"
 ]
