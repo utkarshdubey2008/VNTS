@@ -27,27 +27,27 @@ def test_orthogonal_nullspace_invariance():
     produce ZERO interference on previous task features:
     X_old @ (P_null @ Delta_W) == 0
     """
-    d = 32
-    mem = OrthogonalSubspaceMemory(in_features=d, out_features=2, variance_threshold=0.99)
+    d = 128
+    mem = OrthogonalSubspaceMemory(in_features=d, out_features=2, variance_threshold=1.0, enable_compaction=False)
     
     # Task 1 data
-    X1 = torch.randn(100, d)
-    Y1 = torch.randn(100, 2)
+    X1 = torch.randn(50, d)
+    Y1 = torch.randn(50, 2)
     mem.learn_task(X1, Y1)
     
     # Previous predictions on Task 1
     preds1_before = mem.forward(X1)
     
     # Task 2 data arrives
-    X2 = torch.randn(100, d)
-    Y2 = torch.randn(100, 2)
+    X2 = torch.randn(50, d)
+    Y2 = torch.randn(50, 2)
     mem.learn_task(X2, Y2)
     
     preds1_after = mem.forward(X1)
     
-    # Check that Task 1 predictions are well-preserved (minimal drift)
+    # Check that Task 1 predictions are mathematically invariant
     diff = torch.norm(preds1_after - preds1_before) / torch.norm(preds1_before)
-    assert diff < 0.1, f"Task 1 representation drift is too high: {diff.item():.4f}"
+    assert diff < 1e-4, f"Task 1 representation drift is too high: {diff.item():.4e}"
 
 
 def test_continual_learning_retention():

@@ -15,12 +15,23 @@ class OrthogonalSubspaceMemory:
     """
     Core memory module that learns, consolidates, and retains representations
     without catastrophic forgetting or gradient descent.
+    Supports automatic spectral memory compaction for infinite lifelong learning.
     """
-    def __init__(self, in_features: int, out_features: int, variance_threshold: float = 1.0, reg_lambda: float = 1e-2):
+    def __init__(
+        self,
+        in_features: int,
+        out_features: int,
+        variance_threshold: float = 1.0,
+        reg_lambda: float = 1e-2,
+        enable_compaction: bool = True,
+        capacity_threshold: float = 0.80
+    ):
         self.in_features = in_features
         self.out_features = out_features
         self.variance_threshold = variance_threshold
         self.reg_lambda = reg_lambda
+        self.enable_compaction = enable_compaction
+        self.capacity_threshold = capacity_threshold
         
         # Primary readout weight matrix: (in_features, out_features)
         self.W = torch.zeros((in_features, out_features), dtype=torch.float32)
@@ -28,6 +39,12 @@ class OrthogonalSubspaceMemory:
         # Basis of occupied subspace: (in_features, k)
         self.U_k: Optional[torch.Tensor] = None
         self.num_tasks_learned = 0
+        
+        if enable_compaction:
+            from .compaction import SpectralMemoryCompactor
+            self.compactor = SpectralMemoryCompactor(capacity_threshold=capacity_threshold)
+        else:
+            self.compactor = None
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         return x @ self.W
@@ -99,6 +116,11 @@ class OrthogonalSubspaceMemory:
             # Retain non-trivial orthogonal columns up to d - 1
             max_cols = min(d - 1, combined.shape[1])
             self.U_k = Q_combined[:, :max_cols]
+
+        # Automatic Spectral Memory Compaction if basis approaches capacity
+        if self.compactor is not None and self.U_k is not None:
+            if self.compactor.needs_compaction(self.U_k.shape[1], self.in_features):
+                self.U_k, freed = self.compactor.compact(self.U_k, self.W)
 
         self.num_tasks_learned += 1
         return self.U_k.shape[1]
