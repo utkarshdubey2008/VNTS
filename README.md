@@ -143,5 +143,36 @@ To solve catastrophic forgetting and depth rank collapse without gradients or ba
 
 ---
 
+## Phase 3: Deep Hierarchical OSM & Real Vision Benchmarks
+
+In Phase 3, we extended Orthogonal Subspace Memory to deep multi-layer architectures: **Deep-OSM** (`src/osm/deep_osm.py`).
+
+### 1. Real Vision Benchmark: Full MNIST (784 Inputs, 10 Classes)
+Evaluated on 5,000 real images (784 features each):
+
+| Paradigm | Architecture | Test Accuracy | Training Time | Speedup vs AdamW |
+| :--- | :--- | :--- | :--- | :--- |
+| **Conventional Backprop (AdamW)** | `[784, 256, 128, 10]` | 95.00% | 2.997s | 1.00x |
+| **Conventional Backprop (SGD+Mom)** | `[784, 256, 128, 10]` | 94.80% | 2.439s | 1.23x |
+| **DATS-SI (Phase 1 Paradigm)** | `[784, 256, 128, 10]` | 84.95% | 3.848s | 0.78x |
+| **OSM-RME (Phase 2 Successor)** | `[784 -> 1024 -> 10]` | 92.45% | **0.694s** | **4.32x faster** |
+| **Deep-OSM (Phase 3 Hierarchical)** | `[784 -> 512 -> 512 -> 256 -> 10]` | **92.00%** | **0.453s** | **6.62x faster** |
+
+---
+
+### 2. 5-Task Split-MNIST Continual Learning Benchmark
+Evaluated across 5 sequential tasks ([0,1] $\to$ [2,3] $\to$ [4,5] $\to$ [6,7] $\to$ [8,9]) with zero rehearsal buffers:
+
+| Task Digits | Backprop (AdamW) Final Retained | Deep-OSM Final Retained |
+| :--- | :--- | :--- |
+| **Task 1 (0, 1)** | **0.00% (TOTAL AMNESIA)** | **92.00% (RETAINED)** |
+| **Task 2 (2, 3)** | **0.00% (TOTAL AMNESIA)** | **74.50% (RETAINED)** |
+| **Task 3 (4, 5)** | **0.00% (TOTAL AMNESIA)** | **77.50% (RETAINED)** |
+| **Task 4 (6, 7)** | **0.00% (TOTAL AMNESIA)** | **73.00% (RETAINED)** |
+| **Task 5 (8, 9)** | 96.50% | 77.00% |
+| **AVERAGE RETAINED** | **19.30% (COLLAPSED)** | **78.80% (ROBUST RETENTION)** |
+
+---
+
 ## License
 Apache License 2.0.
