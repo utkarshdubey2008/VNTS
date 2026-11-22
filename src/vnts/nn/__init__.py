@@ -8,6 +8,7 @@ from .mora import MultiScaleOrthogonalAttention
 from .time_series import ContinuousStateSpaceTracker
 from .residual_vision import ResidualBlock, ResVNTSVision
 from .moe import OrthogonalSubspaceMoE
+from .orma import ORMALayer, ORMANetwork
 
 __all__ = [
     "Activation",
@@ -23,5 +24,7 @@ __all__ = [
     "ContinuousStateSpaceTracker",
     "ResidualBlock",
     "ResVNTSVision",
-    "OrthogonalSubspaceMoE"
+    "OrthogonalSubspaceMoE",
+    "ORMALayer",
+    "ORMANetwork"
 ]

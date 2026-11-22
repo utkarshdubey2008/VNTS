@@ -1,3 +1,4 @@
+pub mod attention;
 pub mod c_api;
 pub mod cholesky;
 pub mod llm;
@@ -7,6 +8,7 @@ pub mod nullspace;
 pub mod qr;
 pub mod woodbury;
 
+pub use attention::NativeMORA;
 pub use cholesky::Cholesky;
 pub use llm::NativeMicroLLM;
 pub use matrix::Matrix;
@@ -29,7 +31,6 @@ mod tests {
 
     #[test]
     fn test_cholesky_solve() {
-        // A = [[4, 2], [2, 3]], B = [[6], [5]] -> solution X = [[1], [1]]
         let a = Matrix::new(2, 2, vec![4.0, 2.0, 2.0, 3.0]);
         let b = Matrix::new(2, 1, vec![6.0, 5.0]);
         let x = Cholesky::solve(&a, &b).expect("Cholesky failed");
@@ -55,19 +56,16 @@ mod tests {
         let d = 32;
         let mut mem = NativeOrthogonalMemory::new(d, 2, 1e-3);
 
-        // Task 1
         let x1 = Matrix::random(30, d, 1.0);
         let y1 = Matrix::random(30, 2, 1.0);
         mem.learn_task(&x1, &y1);
         let p1_before = mem.forward(&x1);
 
-        // Task 2
         let x2 = Matrix::random(30, d, 1.0);
         let y2 = Matrix::random(30, 2, 1.0);
         mem.learn_task(&x2, &y2);
         let p1_after = mem.forward(&x1);
 
-        // Diff should be minimal (machine precision nullspace invariance)
         let diff = p1_after.sub(&p1_before).norm_frobenius() / p1_before.norm_frobenius();
         assert!(diff < 1e-4, "Task 1 representation drift: {}", diff);
     }
@@ -82,5 +80,16 @@ mod tests {
 
         let gen = llm.generate("vector", 15, 0.7);
         assert!(gen.starts_with("vector"));
+    }
+
+    #[test]
+    fn test_native_mora_attention() {
+        let t_len = 16;
+        let embed_dim = 32;
+        let num_heads = 2;
+        let mora = NativeMORA::new(embed_dim, num_heads);
+        let x = Matrix::random(t_len, embed_dim, 1.0);
+        let out = mora.forward(&x);
+        assert_eq!((out.rows, out.cols), (t_len, embed_dim));
     }
 }
