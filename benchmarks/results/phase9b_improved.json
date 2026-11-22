@@ -1,0 +1,55 @@
+{
+  "cifar10_pca128": {
+    "n_train": 2000,
+    "n_test": 500,
+    "pca_dim": 128,
+    "vnts_pca_orma": {
+      "accuracy": 0.36000001430511475,
+      "train_time_s": 3.8336364919996413
+    },
+    "vnts_ensemble_orma": {
+      "accuracy": 0.4099999964237213,
+      "train_time_s": 18.75132371499967
+    },
+    "baseline_pca_lr": {
+      "accuracy": 0.324,
+      "train_time_s": 0.15607637300126953
+    },
+    "baseline_pca_mlp": {
+      "accuracy": 0.37599998712539673,
+      "train_time_s": 1.4261527639991982
+    }
+  },
+  "adult_income_v2": {
+    "n_train": 10000,
+    "n_test": 9769,
+    "n_features": 108,
+    "vnts_pca_orma": {
+      "accuracy": 0.8521854877471924,
+      "train_time_s": 0.046857520999765256
+    },
+    "baseline_lr": {
+      "accuracy": 0.8539256832838571,
+      "train_time_s": 4.144694169999639
+    },
+    "baseline_mlp": {
+      "accuracy": 0.8446105026102979,
+      "train_time_s": 1.391765991000284
+    }
+  },
+  "char_lm_positional": {
+    "feature_type": "positional_one_hot",
+    "feature_dim": 1040,
+    "seq_len": 16,
+    "vnts_orma_lm": {
+      "val_perplexity": 54.525965276444204,
+      "val_accuracy": 0.23199999332427979,
+      "train_time_s": 0.3174157389985339
+    },
+    "baseline_mlp_lm": {
+      "val_perplexity": 16.445277233240382,
+      "val_accuracy": 0.2709999978542328,
+      "train_time_s": 0.8564536680005403
+    }
+  }
+}

@@ -9,22 +9,15 @@ from .time_series import ContinuousStateSpaceTracker
 from .residual_vision import ResidualBlock, ResVNTSVision
 from .moe import OrthogonalSubspaceMoE
 from .orma import ORMALayer, ORMANetwork
+from .enhanced import PCAProjectedORMA, EnsembleORMA, IncrementalORMA
+from .nystrom import NystromKernelLayer, NystromORMA
 
 __all__ = [
-    "Activation",
-    "Identity",
-    "InvertibleLeakyReLU",
-    "Softmax",
-    "Dense",
-    "OrthogonalMemory",
-    "COMTSequence",
-    "SpatialPatch",
-    "MultiScaleSpatialOSM",
-    "MultiScaleOrthogonalAttention",
-    "ContinuousStateSpaceTracker",
-    "ResidualBlock",
-    "ResVNTSVision",
-    "OrthogonalSubspaceMoE",
-    "ORMALayer",
-    "ORMANetwork"
+    "Activation", "Identity", "InvertibleLeakyReLU", "Softmax",
+    "Dense", "OrthogonalMemory", "COMTSequence", "SpatialPatch",
+    "MultiScaleSpatialOSM", "MultiScaleOrthogonalAttention",
+    "ContinuousStateSpaceTracker", "ResidualBlock", "ResVNTSVision",
+    "OrthogonalSubspaceMoE", "ORMALayer", "ORMANetwork",
+    "PCAProjectedORMA", "EnsembleORMA", "IncrementalORMA",
+    "NystromKernelLayer", "NystromORMA",
 ]
